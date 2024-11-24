@@ -1,0 +1,227 @@
+/* Reset de márgenes y paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo animado con cambio de tonos azul-violeta */
+@keyframes changeBackground {
+  0% {
+    background-color: #3b3bd6; /* Azul */
+  }
+  50% {
+    background-color: #6b21a0; /* Violeta */
+  }
+  100% {
+    background-color: #3b3bd6; /* Azul */
+  }
+}
+
+/* Aplicamos la animación al fondo de la página */
+body {
+  font-family: 'Poppins', sans-serif; /* Usamos Poppins aquí */
+  animation: changeBackground 10s infinite; /* Animación de 10 segundos y se repite infinitamente */
+  transition: background-color 1s ease-in-out; /* Suaviza la transición entre los cambios de color */
+  padding: 20px;
+  color: white;
+}
+
+/* Título principal */
+h1.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: yellow;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: 16px;
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+/* Estilos para la grilla de películas */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 películas por fila */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Animación para los rectángulos de las películas */
+@keyframes changeCardBackground {
+  0% {
+    background-color: #3b3bd6; /* Azul */
+  }
+  50% {
+    background-color: #6b21a0; /* Violeta */
+  }
+  100% {
+    background-color: #3b3bd6; /* Azul */
+  }
+}
+
+/* Estilos para cada tarjeta de película */
+.movie-card {
+  background-color: #3b3bd6; /* Azul */
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  animation: changeCardBackground 10s infinite; /* Aplicamos la animación */
+}
+
+.movie-card:hover {
+  transform: scale(1.05); /* Efecto de hover más suave */
+}
+
+/* Imagen de la película */
+.movie-card img {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Limité el tamaño de la imagen */
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie-card img:hover {
+  transform: scale(1.1); /* Zoom cuando pasas el cursor */
+}
+
+/* Título de la película */
+.movie-card h3 {
+  color: yellow; /* Color de texto amarillo */
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.movie-card a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: yellow; /* Asegura que los enlaces sean amarillos */
+}
+
+.movie-card a:hover {
+  text-decoration: underline;
+}
+
+/* Paginación */
+.pagination-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.pagination-button:disabled {
+  background-color: #777;
+  cursor: not-allowed;
+}
+
+.pagination-button:hover {
+  background-color: #555;
+}
+
+/* Estilo para el "No movies found" */
+.no-movies {
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+
+/* Detalles de la película */
+.movie-details-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  color: white;
+  background-color: #6b21a0; /* Fondo violeta inicial */
+  animation: changeCardBackground 10s infinite; /* Añadimos la animación */
+  border-radius: 15px; /* Redondear las esquinas del contenedor */
+}
+
+/* Imagen del poster */
+.movie-poster img {
+  max-width: 450px; /* Aumento el tamaño máximo de la imagen */
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  object-fit: cover; /* Asegura que la imagen se recorte para mantener las proporciones */
+}
+
+/* Información de la película */
+.movie-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente el contenido */
+  text-align: center; /* Centra el texto */
+}
+
+/* Título */
+.movie-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: yellow; /* Cambié el color a amarillo */
+}
+
+/* Detalles de texto (fecha, valoración, resumen) */
+.movie-details-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  max-width: 600px;
+  color: yellow; /* Cambié el color a amarillo */
+}
+
+/* Botón del tráiler */
+.trailer-button {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.trailer-button:hover {
+  background-color: #555;
+}
+
+/* Botón del tráiler */
+.trailer-button {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.trailer-button:hover {
+  background-color: #555;
+}
